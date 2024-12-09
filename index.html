@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
+        <title>Algoritmos Greddy</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body class="texto">
+        <header class="hero">
+            <h1 class="titulo">
+                Algoritmos Voraces
+            </h1>
+        </header>
+        <main class="seccion">
+            <h2>Introducción</h2>
+            <section class="texto-p">
+                <p>
+                    Los algoritmos voraces, también conocidos como greedy algorithms en inglés, son una estrategia de resolución de problemas que se basa en tomar decisiones de manera secuencial, eligiendo siempre la opción que parece ser la mejor en cada momento. Este enfoque se centra en encontrar una solución óptima local en cada paso, con la esperanza de que estas decisiones locales lleven a una solución óptima global. Su característica principal es que no considera decisiones futuras ni evalúa el impacto de las elecciones actuales en etapas posteriores del problema.
+                </p>
+                <div class="texto">
+                    <h2>Ejemplo</h2>
+                </div>
+                <p>
+                    Una tortuga, la cual le encanta comer lechuga de camino a su casa, quiere encontrar el camino que más lechuga pueda comer antes de llegar a la casa (maximizar ganancias). Cabe mencionar que la tortuga no se puede regresar por el camino que tomó, tan solo puede viajar hacia la derecha o hacia abajo (solo puede ver dos opciones de lechugas que podrá comer por cada paso).  
+                </p>
+                <div class="imagen-centrada">
+                    <img src="/img/tortuga-1.png" width="70%" >
+                </div>
+                <p>
+                    Como se puede apreciar en la imagen anterior, la tortuga empieza en la parte superior izquierda del mapa de lechugas antes de llegar a su casa, y como primeras opciones de comer tiene 4 lechugas (a su derecha) o 10 lechugas (hacia abajo), por lo que la opción más óptima es dar un paso hacia abajo, ya que su propósito es comer todo lo que pueda antes de llegar a su casa.  
+                </p>
+                <div class="imagen-centrada">
+                    <img src="/img/tortuga-2.png" width="70%" >
+                </div>
+                <p>
+                    En la imagen anterior se observa el camino que tomaría la tortuga usando su método de consumir más lechugas (voraz), aunque si observamos detalladamente, podemos ver que si la tortuga hubiera tomado otro camino habría comido muchas más lechugas de las que se comió por usar su método. Por lo que podemos concluir que los algoritmos voraces no son (o no deberían) ser empleados para problemas donde se busca el mayor rendimiento posible, ya que estos buscan las opciones más óptimas locales para que, idealmente, conduzcan a una solución óptima global.
+                </p>
+                <p>
+                    A continuación, se presentaran algunos de los muchos ejercicios que se pueden realizar con los algoritmos voaces. 
+                </p>
+            </section>
+        </main>
+        <section class="texto seccion">
+                <h2> Algunos ejemplos de algoritmos voraces:</h2>
+                <div class="carruzel">
+                    <div class="caja">
+                        <h3>knapsack problem</h3>
+                        <p>Una aplicacion la cual calcula los objetos que se deben de llevar en la mochila</p>
+                        <a class="boton" href="knapsack.html">Ver ejemplo</a>
+                    </div>
+                    <div class="caja">
+                        <h3>Job scheduling</h3>
+                        <p>Un programa que calcula los horarios de los trabajos dependiendo de la prioridad que tenga el usuario</p>
+                        <a class="boton" href="job_cheduling.html">Ver ejemplo</a>
+                    </div>
+                    <div class="caja">
+                        <h3>Set converting</h3>
+                        <p>Este problema consiste en encontrar el subconjunto más pequeño de conjuntos que cubran todos los elementos de un universo dado. Se define formalmente así</p>
+                        <a class="boton" href="set_convering.html">Ver ejemplo</a>
+                    </div>
+                </div>
+        </section>
+    </body>
+    <footer class="texto">
+        <h5>UNAH COPAN - Algoritmos y Estructuras de Datos, 3 PAC 2024</h5>
+        <h5>Estudiante: Victor Manuel Vega Oyuela</h5>
+        <h5>Contacto: vmvega@unah.hn</h5>
+    </footer>
+    <script src="js/animation-app.js"></script>
+</html>

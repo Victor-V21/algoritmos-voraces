@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
+        <title>Set convering</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body class="texto">
+        <header class="hero">
+            <a class="boton" href="index.html">Atras</a>
+            <h1 class="titulo">Set convering</h1>
+        </header>
+        <div class="texto-p seccion">
+            <p>
+                El problema de Set Covering es un desafío de optimización que busca cubrir completamente un conjunto universal U utilizando una selección mínima de subconjuntos, tomados de una familia de subconjuntos disponibles. En general, estos subconjuntos son más pequeños que el conjunto universal y son proporcionados por el usuario como parte de los datos de entrada. El objetivo principal es encontrar la combinación de subconjuntos que cubra todos los elementos de UU de la manera más eficiente posible.
+            </p>
+            <div class="imagen-centrada">
+                <img src="img/setconvering-1.jpg" alt="Conjunto lleno de subconjuntos que lo cubren">
+            </div>
+            <p>
+                Para resolver este problema, se pueden utilizar algoritmos voraces, que se centran en seleccionar, en cada paso, el subconjunto que cubra la mayor cantidad de elementos no cubiertos del conjunto universal.
+            </p>
+        </div>
+        <div class="seccion-ejerc">
+            <form class="form-res">
+                <h2>Zona de Ingreso de Datos</h2>
+                <table class="remarcar">
+                    <tr>
+                        <td colspan="3"><h3>Cantidad de subconjuntos:</h3></td>
+                        <td><input type="number" id="cant-subconjuntos"></td> 
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <button type="button" id="btn-subconjuntos" class="boton">Actualizar tabla</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><h3>Conjunto Universal(U):</h3></td>   
+                        <td colspan="2"><input type="text" id="conjunto-u"></td>                     
+                    </tr>
+                    <tr>
+                        <td colspan="4"><h3>Familia de subconjuntos</h3></td>
+                    </tr>
+                    <tr>
+                        <td>N°</td>
+                        <td colspan="3">Subconjunto</td>
+                    </tr>
+                    <tfoot id="tabla-f-subconjutos">
+                        <td colspan="4">INGRESE UNA CANTIDAD DE SUBCONJUNTOS PARA CONTINUAR </td>
+                    </tfoot>
+                </table>
+                <button type="button" id="btn-submit" class="boton">Procesar Datos</button>
+            </form>
+            <div class="form-res">
+                <h2>Zona De resultados</h2>
+                <ul id="lista-resultados" class="lista">
+                </ul>
+                <div id = "footer-resultado">
+                </div>
+            </div>
+        </div>
+        <div class="seccion">
+            <h2>Grafica: </h2>
+            <table class="tabla-grafica" id="site-grafica">
+            </table>
+    </div>
+    </body>
+    <script type="module" src="js/app3.js"></script>
+</html>

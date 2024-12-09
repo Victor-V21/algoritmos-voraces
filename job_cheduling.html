@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
+        <title>Job Cheduling</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body class="texto">
+        <header class="hero">
+            <a class="boton" href="index.html">Atras</a>
+            <h1 class="titulo">Job scheduling</h1>
+        </header>
+        <div class="texto-p seccion">
+            <p>
+                El problema de Job Scheduling es un desafío de optimización que se centra en organizar los trabajos de un usuario de acuerdo con un criterio específico. Cada trabajo tiene atributos como una hora de inicio, una hora de finalización y una ganancia asociada. Dependiendo del método seleccionado, las decisiones sobre la asignación y priorización de los trabajos varían, adaptándose a los objetivos establecidos.
+                Los trabajos de forma ordenada por hora inicial se verian de la siguiente manera:
+            </p>
+            <div class="imagen-centrada">
+                <img src="img/job-1.png" alt="Imagen de trabajos ordenados" width="80%">
+            </div>
+            <p>
+                Note se que en la parte Inferior en los recuadros de color verde que incluyen el nombre del trabajo, esa es la respuesta del programa al devolver los trabajos que se deben de hacer en el intervalo de tiempo adecuado.
+                A continuacion, podrá realizar ejercicios por metodo de ganancia maxima, donde se prioriza la mayor ganancia de cada decision de trabajo, y el segundo metodo, por mayor numeros de trabajos, que elige los trabajos de menor duracion para abarcar aun mas.
+            </p>
+        </div>
+        <div class="texto seccion-ejerc">
+            <form class="form-res">
+                <h2>Zona de Ingreso de Datos</h2>
+                <table class="remarcar">
+                    <tr>
+                        <td colspan="3"><h3>Cantidad de trabajos:</h3></td>
+                        <td><input type="number" id="cant-trab"></td> 
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <button type="button" id="btn-trabajos" class="boton">Actualizar tabla</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"><h3>Metodos de Solucion:</h3></td>                        
+                    </tr>
+                    <tr>
+                        <td colspan="2">Por Ganancia Maxima<input type="radio" name="metodo" value="ganancia"></td>
+                        <td colspan="2">Por Mayor Cantidad de Trabajos<input type="radio" name="metodo" value="cantidad"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"><h3>Datos de los trabajos</h3></td>
+                    </tr>
+                    <tr>
+                        <td>Trabajo</td>
+                        <td>Hora Inicial:</td>
+                        <td>Hora Final:</td>
+                        <td>Ganancia:</td>
+                    </tr>
+                    <tfoot id="tabla-trabajos">
+                        <td colspan="4">INGRESE UNA CANTIDAD DE TRABAJOS</td>
+                    </tfoot>
+                </table>
+                <button type="button" id="btn-submit" class="boton">Procesar Datos</button>
+            </form>
+            <div class="form-res">
+                <h2>Zona De resultados</h2>
+                <ul id="lista-resultados" class="lista">
+                </ul>
+                <div id = "footer-resultado">
+                </div>
+            </div>
+        </div>
+        <div class="seccion">
+                <h2>Grafica de Grann: </h2>
+                <table class="tabla-grafica" id="site-grafica">
+                </table>
+        </div>
+    </body>
+    <script src="js/app2.js" type="module"></script>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
+        <title>knapsack</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <header class="hero">
+            <a class="boton" href="index.html">Atras</a>
+            <h1 class="titulo">knapsack Problem</h1>
+        </header>
+        <div class="texto seccion">
+            <div class="texto-p">
+                <p>
+                    El problema de la mochila es un desafío de optimización que consiste en seleccionar los objetos con mayor valor posible para incluir en una mochila con capacidad limitada, respetando la restricción de peso. Cada objeto tiene un peso y un valor asignado, y el objetivo es encontrar la combinación óptima que maximiza el valor total.
+                </p>
+                <div class="imagen-centrada">
+                    <img src="img/mochila-1.png" alt="Imagen de Mochila con objetos">
+                </div>
+                <p>
+                    Se puede resolver con diferentes métodos, como programación dinámica, algoritmos voraces y búsqueda, cada uno con sus características particulares, pero nos vamos a enfocar especialmente en los algoritmos voraces, ya que con este se pueden resolver tomando como entrada diferentes parametros.
+                </p>
+                <p>
+                    Existen variantes como el Problema de Mochila 0/1 (donde se toma el objeto completamente o no) y el Problema de Mochila Fraccional (donde se pueden tomar fracciones de un objeto).
+                </p>
+                <p>
+                    En este espacio vamos a trabajar unicamente con el Problema de la Mochila Fraccional ya que resulta mas interesante ver como el algortimo voraz resuelve el ejercicio, A continuacion, podran probar el problema: 
+                </p>
+            </div>
+        </div>
+        <div class="texto seccion-ejerc">
+            <form class="form-res">
+                <h2>Zona de Ingreso de Datos</h2>
+                <table class="remarcar">
+                    <tr>
+                        <td colspan="2"><h3>Peso Maximo de la Mochila:</h3></td>
+                        <td><input type="number" id="peso-max"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><h3>Metodos de Solucion:</h3></td>                        
+                    </tr>
+                    <tr>
+                        <td>Por valor maximo<input type="radio" name="metodo" value="valor"></td>
+                        <td>Por peso minimo<input type="radio" name="metodo" value="peso"></td>
+                        <td>Por indice mayor<input type="radio" name="metodo" value="indice"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><h3>Datos de los objetos</h3></td>
+                    </tr>
+                    <tr>
+                        <td>Descripcion</td>
+                        <td>Valor:</td>
+                        <td>Peso:</td>
+                    </tr>
+                    <tr id="obj1">
+                        <td><input type="text" class="descrip"></td>
+                        <td><input type="number" class="valor"></td>
+                        <td><input type="number" class="peso"></td>
+                    </tr>
+                    <tr id="obj2">
+                        <td><input type="text" class="descrip"></td>
+                        <td><input type="number" class="valor"></td>
+                        <td><input type="number" class="peso"></td>
+                    </tr>
+                    <tr id="obj3">
+                        <td><input type="text" class="descrip"></td>
+                        <td><input type="number" class="valor"></td>
+                        <td><input type="number" class="peso"></td>
+                    </tr>
+                    <tr id="obj4">
+                        <td><input type="text" class="descrip"></td>
+                        <td><input type="number" class="valor"></td>
+                        <td><input type="number" class="peso"></td>
+                    </tr>
+                </table>
+                <button type="button" id="btnSubmit" class="boton">Procesar Datos</button>
+            </form>
+            <div class="form-res">
+                <h2>
+                    Zona De resultados
+                </h2>
+                <ul id="lista-resultados" class="lista">
+                </ul>
+                <div id = "footer-resultado">
+                </div>
+            </div>
+        </div>
+        <script type="module" src="js/app1.js"></script>
+    </body>
+</html>
